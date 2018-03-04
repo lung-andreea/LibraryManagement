@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.util.Set;
 
 /**
- * @author radu.
+ * @author CeleDouaFantastice.
  */
 public class Console {
     private BookController ctrl;
