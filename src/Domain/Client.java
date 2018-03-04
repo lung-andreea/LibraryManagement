@@ -1,6 +1,6 @@
 package Domain;
 
-public class Client {
+public class Client extends BaseEntity<Integer> {
     private String name;
     private Integer amountSpent = 0;
 

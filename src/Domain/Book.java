@@ -1,6 +1,6 @@
 package Domain;
 
-public class Book {
+public class Book extends BaseEntity<Integer>{
     private String title;
     private String author;
     private Integer price;
