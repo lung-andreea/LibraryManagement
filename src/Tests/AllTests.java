@@ -12,5 +12,6 @@ public class AllTests {
     public void testAll(){
         tb.testBook();
         tc.testClient();
+        tv.testValidator();
     }
 }
