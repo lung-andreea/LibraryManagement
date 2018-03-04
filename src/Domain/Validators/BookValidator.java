@@ -10,6 +10,5 @@ public class BookValidator implements Validator<Book>{
             throw new ValidatorException("Invalid stock!");
         if(entity.getPrice()<0)
             throw new ValidatorException("Price must be greater than zero!");
-        
     }
 }
