@@ -1,6 +1,7 @@
 package Repository;
 
 import Domain.BaseEntity;
+import Domain.Validators.Validator;
 import Exceptions.ValidatorException;
 
 import java.util.HashMap;
@@ -11,9 +12,10 @@ import java.util.stream.Collectors;
 
 public class InMemoryRepository<ID, T extends BaseEntity<ID>> implements IRepository<ID, T> {
     private Map<ID, T> entities;
+    private Validator<T> validator;
 
-    public InMemoryRepository() {
-        //this.validator = validator;
+    public InMemoryRepository(Validator<T> validator) {
+        this.validator = validator;
         entities = new HashMap<>();
     }
 
@@ -36,7 +38,7 @@ public class InMemoryRepository<ID, T extends BaseEntity<ID>> implements IReposi
         if (entity == null) {
             throw new IllegalArgumentException("id must not be null");
         }
-        //validator.validate(entity);
+        validator.validate(entity);
         return Optional.ofNullable(entities.putIfAbsent(entity.getId(), entity));
     }
 
@@ -53,8 +55,7 @@ public class InMemoryRepository<ID, T extends BaseEntity<ID>> implements IReposi
         if (entity == null) {
             throw new IllegalArgumentException("entity must not be null");
         }
-        //validator.validate(entity);
-
+        validator.validate(entity);
         return Optional.ofNullable(entities.computeIfPresent(entity.getId(), (k, v) -> entity));
     }
 }
