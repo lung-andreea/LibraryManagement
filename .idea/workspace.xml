@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae32555f-1c4c-4fe7-b515-e1f0c4d5ddc9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Book.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Client.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/chacha/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/chacha/Repository/IRepository.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/BaseEntity.java" afterPath="$PROJECT_DIR$/src/Domain/BaseEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/Book.java" afterPath="$PROJECT_DIR$/src/Domain/Book.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Domain/Client.java" afterPath="$PROJECT_DIR$/src/Domain/Client.java" />
-    </list>
+    <list default="true" id="ae32555f-1c4c-4fe7-b515-e1f0c4d5ddc9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
