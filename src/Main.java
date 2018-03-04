@@ -10,10 +10,10 @@ import Tests.AllTests;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("HELOOOO BTS HEREEE");
+        //System.out.println("HELOOOO BTS HEREEE");
         AllTests tests=new AllTests();
         tests.testAll();
-
+        System.out.println("All went well");
 //
 ////        IRepository<Integer, Book> repo=new InMemoryRepository<>(new BookValidator());
 ////
