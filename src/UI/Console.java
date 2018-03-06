@@ -8,6 +8,7 @@ import Exceptions.ValidatorException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 import java.util.Set;
 
 /**
@@ -21,12 +22,7 @@ public class Console {
     }
 
     public void runConsole() {
-        addBooks();
-        addClients();
-        printAllBooks();
-        printAllClients();
-        filterBooks();
-        filterClients();
+        runMenu();
     }
 
     private void filterBooks() {
@@ -51,30 +47,69 @@ public class Console {
         clients.stream().forEach(System.out::println);
     }
 
-    private void addBooks() {
-        while (true) {
-            Book b = readBook();
-            if (b == null || b.getId() < 0) {
-                break;
-            }
-            try {
-                ctrl.addBook(b);
-            } catch (ValidatorException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+//    private void addBooks() {
+//        while (true) {
+//            Book b = readBook();
+//            if (b == null || b.getId() < 0) {
+//                break;
+//            }
+//            try {
+//                ctrl.addBook(b);
+//            } catch (ValidatorException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//
+//    private void addClients() {
+//        while (true) {
+//            Client c = readClient();
+//            if (c == null || c.getId() < 0) {
+//                break;
+//            }
+//            try {
+//                ctrl.addClient(c);
+//            } catch (ValidatorException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
-    private void addClients() {
-        while (true) {
-            Client c = readClient();
-            if (c == null || c.getId() < 0) {
-                break;
-            }
-            try {
-                ctrl.addClient(c);
-            } catch (ValidatorException e) {
-                e.printStackTrace();
+    private void runMenu() {
+        while(true){
+            System.out.print("1 - Read new Book\n" +
+                    "2 - Read new Client\n" +
+                    "3 - Print all Books\n" +
+                    "4 - Print all clients\n" +
+                    "5 - Filter books\n" +
+                    "6 - Filter clients\n" +
+                    "0 - Exit\n");
+            Scanner sc = new Scanner(System.in);
+            int cmd = sc.nextInt();
+            switch (cmd)
+            {
+                case 0:
+                {System.exit(0);}
+                case 1:
+                { readBook();
+                    break; }
+                case 2:
+                { readClient();
+                    break; }
+                case 3:
+                { printAllBooks();
+                    break; }
+                case 4:
+                { printAllClients();
+                    break; }
+                case 5:
+                { filterBooks();
+                    break; }
+                case 6:
+                { filterClients();
+                    break; }
+                default:
+                { System.out.println("Invalid command!\n"); }
             }
         }
     }
