@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4a90642-27ad-4d6a-80a0-ab531c9244be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/BaseEntity.class" afterPath="$PROJECT_DIR$/out/production/chacha/Domain/BaseEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Book.class" afterPath="$PROJECT_DIR$/out/production/chacha/Domain/Book.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Client.class" afterPath="$PROJECT_DIR$/out/production/chacha/Domain/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Validators/BookValidator.class" afterPath="$PROJECT_DIR$/out/production/chacha/Domain/Validators/BookValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Validators/ClientValidator.class" afterPath="$PROJECT_DIR$/out/production/chacha/Domain/Validators/ClientValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Domain/Validators/Validator.class" afterPath="$PROJECT_DIR$/out/production/chacha/Domain/Validators/Validator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Exceptions/ValidatorException.class" afterPath="$PROJECT_DIR$/out/production/chacha/Exceptions/ValidatorException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Main.class" afterPath="$PROJECT_DIR$/out/production/chacha/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Repository/IRepository.class" afterPath="$PROJECT_DIR$/out/production/chacha/Repository/IRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Repository/InMemoryRepository.class" afterPath="$PROJECT_DIR$/out/production/chacha/Repository/InMemoryRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Tests/AllTests.class" afterPath="$PROJECT_DIR$/out/production/chacha/Tests/AllTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Tests/DomainTests/TestBook.class" afterPath="$PROJECT_DIR$/out/production/chacha/Tests/DomainTests/TestBook.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Tests/DomainTests/TestClient.class" afterPath="$PROJECT_DIR$/out/production/chacha/Tests/DomainTests/TestClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/chacha/Tests/DomainTests/TestValidator.class" afterPath="$PROJECT_DIR$/out/production/chacha/Tests/DomainTests/TestValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UI/Console.java" afterPath="$PROJECT_DIR$/src/UI/Console.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +20,18 @@
             <state relative-caret-position="315">
               <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <marker date="1520327293755" expanded="true" signature="26602:26619" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/Console.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="714">
               <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding />
             </state>
@@ -365,10 +361,7 @@
         <state relative-caret-position="168">
           <caret line="8" column="51" lean-forward="false" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
           <folding>
-            <marker date="1520327199444" expanded="true" signature="29694:29711" ph="..." />
-            <marker date="1520327199444" expanded="true" signature="29694:29729" ph="..." />
-            <marker date="1520327199444" expanded="true" signature="29694:29742" ph="..." />
-            <marker date="1520327199444" expanded="true" signature="29694:29757" ph="..." />
+            <marker date="1520327293755" expanded="true" signature="26602:26619" ph="..." />
           </folding>
         </state>
       </provider>
@@ -441,19 +434,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <marker date="1520327199444" expanded="true" signature="29694:29711" ph="..." />
-            <marker date="1520327199444" expanded="true" signature="29694:29729" ph="..." />
-            <marker date="1520327199444" expanded="true" signature="29694:29742" ph="..." />
-            <marker date="1520327199444" expanded="true" signature="29694:29757" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -472,9 +452,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Console.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="714">
           <caret line="47" column="5" lean-forward="false" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <marker date="1520327293755" expanded="true" signature="26602:26619" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
