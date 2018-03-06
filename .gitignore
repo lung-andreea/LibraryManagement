@@ -16,7 +16,7 @@ node_modules
 *.iml
 *.ipr
 *.iws
-.idea/
+.idea/**
 build
 out
 generated
