@@ -26,8 +26,8 @@ public class Console {
     }
 
     private void filterBooks() {
-        System.out.println("filtered books (the ones written by 'Ken Follett'):");
-        Set<Book> books = ctrl.filterBooksByAuthor("Ken Follett");
+        System.out.println("filtered books (the ones written by 'author'):");
+        Set<Book> books = ctrl.filterBooksByAuthor("author");
         books.stream().forEach(System.out::println);
     }
 
@@ -46,34 +46,6 @@ public class Console {
         Set<Client> clients = ctrl.getAllClients();
         clients.stream().forEach(System.out::println);
     }
-
-//    private void addBooks() {
-//        while (true) {
-//            Book b = readBook();
-//            if (b == null || b.getId() < 0) {
-//                break;
-//            }
-//            try {
-//                ctrl.addBook(b);
-//            } catch (ValidatorException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-//
-//    private void addClients() {
-//        while (true) {
-//            Client c = readClient();
-//            if (c == null || c.getId() < 0) {
-//                break;
-//            }
-//            try {
-//                ctrl.addClient(c);
-//            } catch (ValidatorException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
 
     private void runMenu() {
         while(true){
@@ -127,10 +99,13 @@ public class Console {
 
             Book b = new Book(title, author, price, stock);
             b.setId(id);
-
+            ctrl.addBook(b);
             return b;
         } catch (IOException ex) {
             ex.printStackTrace();
+        }
+        catch (ValidatorException e){
+            System.out.println(e);
         }
         return null;
     }
@@ -145,10 +120,13 @@ public class Console {
 
             Client c = new Client(name);
             c.setId(id);
-
+            ctrl.addClient(c);
             return c;
         } catch (IOException ex) {
             ex.printStackTrace();
+        }
+        catch(ValidatorException e){
+            System.out.println(e);
         }
         return null;
     }
