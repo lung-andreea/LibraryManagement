@@ -47,7 +47,7 @@ public class BookController {
         Iterable<Book> students = bookRepo.findAll();
         //version 1
         Set<Book> filteredBooks = StreamSupport.stream(students.spliterator(), false)
-                .filter(book -> book.getAuthor() == s).collect(Collectors.toSet());
+                .filter(book -> book.getAuthor().equals(s)).collect(Collectors.toSet());
         return filteredBooks;
     }
 

@@ -26,9 +26,16 @@ public class Console {
     }
 
     private void filterBooks() {
-        System.out.println("filtered books (the ones written by 'author'):");
-        Set<Book> books = ctrl.filterBooksByAuthor("author");
-        books.stream().forEach(System.out::println);
+        System.out.println("Enter author name: ");
+        BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            String author=bufferRead.readLine();
+            Set<Book> books = ctrl.filterBooksByAuthor(author);
+            books.stream().forEach(System.out::println);
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     private void filterClients() {
