@@ -1,11 +1,15 @@
+import Controller.BookController;
+import Domain.BaseEntity;
 import Domain.Book;
 import Domain.Client;
 import Domain.Validators.BookValidator;
 import Domain.Validators.ClientValidator;
+import Domain.Validators.Validator;
 import Exceptions.ValidatorException;
 import Repository.IRepository;
 import Repository.InMemoryRepository;
 import Tests.AllTests;
+import UI.Console;
 
 public class Main {
 
@@ -13,7 +17,8 @@ public class Main {
         //System.out.println("HELOOOO BTS HEREEE");
         AllTests tests=new AllTests();
         tests.testAll();
-        System.out.println("All went well");
+        Console console = new Console(new BookController(new InMemoryRepository<>(new BookValidator()), new InMemoryRepository<>(new ClientValidator())));
+        console.runConsole();
 //
 ////        IRepository<Integer, Book> repo=new InMemoryRepository<>(new BookValidator());
 ////

@@ -2,9 +2,6 @@ package Domain.Validators;
 
 import Domain.Client;
 import Exceptions.ValidatorException;
-import com.sun.xml.internal.fastinfoset.util.CharArray;
-
-import java.util.ArrayList;
 
 public class ClientValidator implements Validator<Client>{
     String[] forbidden={"1","2","3","4","5","6","7","8","9","0","!","@","#","$","%","^","&","*","(",")","=","+","*","/"};
