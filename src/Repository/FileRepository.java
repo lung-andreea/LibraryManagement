@@ -35,7 +35,6 @@ public class FileRepository<T extends BaseEntity<Integer>> extends InMemoryRepos
         try {
             Files.lines(path).forEach(line -> {
                 List<String> items = Arrays.asList(line.split(","));
-
                 if (items.size()==3) {
                     Integer id = Integer.parseInt(items.get(0));
                     String name = items.get(1);
