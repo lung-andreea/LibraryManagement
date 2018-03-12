@@ -87,6 +87,7 @@ public class BookController {
         }
         client.setAmountSpent(client.getAmountSpent()+book.getPrice());
         clientRepo.update(client);
-        purchaseRepo.save(new Purchase(client,book,amount));
+        Purchase p=new Purchase(client,book,amount);
+        purchaseRepo.save(p);
     }
 }
