@@ -52,7 +52,7 @@ public class Book extends BaseEntity<Integer>{
 
     @Override
     public String toString() {
-        return super.toString()+".\tTitle: "+title+"\tAuthor: "+author+"\tPrice: "+price+"\tStock: "+stock+"\t";
+        return super.toString()+".\t|Title: "+title+"|\t|Author: "+author+"|\t|Price: "+price+"|\t|Stock: "+stock+"|\t";
     }
 
     @Override

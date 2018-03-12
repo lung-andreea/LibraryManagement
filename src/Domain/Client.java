@@ -44,6 +44,6 @@ public class Client extends BaseEntity<Integer> {
 
     @Override
     public String toString() {
-        return this.name+", "+this.amountSpent+", "+super.toString();
+        return super.getId()+".\t|Name:"+this.name+"|\t|Amount spent:"+this.amountSpent+"|";
     }
 }
