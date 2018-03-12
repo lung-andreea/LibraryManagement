@@ -1,6 +1,8 @@
 package Domain;
 
-public class BaseEntity<ID> {
+import java.util.ArrayList;
+
+public abstract class BaseEntity<ID> {
     private ID id;
 
     public ID getId() {

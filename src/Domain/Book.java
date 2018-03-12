@@ -1,5 +1,7 @@
 package Domain;
 
+import java.util.ArrayList;
+
 public class Book extends BaseEntity<Integer>{
     private String title;
     private String author;
