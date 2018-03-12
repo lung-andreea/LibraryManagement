@@ -11,7 +11,6 @@ import UI.Console;
 public class Main {
 
     public static void main(String[] args) {
-
         AllTests tests=new AllTests();
         tests.testAll();
 
