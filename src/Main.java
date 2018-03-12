@@ -1,4 +1,5 @@
 import Controller.BookController;
+import Domain.BaseEntity;
 import Domain.Book;
 import Domain.Client;
 import Domain.Purchase;

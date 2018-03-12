@@ -81,7 +81,7 @@ public class Console {
 
     private void runMenu() {
         while(true){
-            System.out.print("1 - Read new Book\n" +
+            System.out.print("\n1 - Read new Book\n" +
                     "2 - Read new Client\n" +
                     "3 - Print all Books\n" +
                     "4 - Print all clients\n" +
