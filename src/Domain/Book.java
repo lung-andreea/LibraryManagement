@@ -1,6 +1,7 @@
 package Domain;
 
 import java.util.ArrayList;
+import java.util.SimpleTimeZone;
 
 public class Book extends BaseEntity<Integer>{
     private String title;
@@ -52,5 +53,18 @@ public class Book extends BaseEntity<Integer>{
     @Override
     public String toString() {
         return super.toString()+".\tTitle: "+title+"\tAuthor: "+author+"\tPrice: "+price+"\tStock: "+stock+"\t";
+    }
+
+    @Override
+    public Book constructor(ArrayList<String> items) {
+        Integer id=Integer.parseInt(items.get(0));
+        String title=items.get(1);
+        String author=items.get(2);
+        Integer price=Integer.parseInt(items.get(3));
+        Integer stock=Integer.parseInt(items.get(4));
+
+        Book book=new Book(title,author,price,stock);
+        book.setId(id);
+        return book;
     }
 }

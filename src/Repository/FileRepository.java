@@ -36,18 +36,14 @@ public class FileRepository<T extends BaseEntity<Integer>> extends InMemoryRepos
             Files.lines(path).forEach(line -> {
                 List<String> items = Arrays.asList(line.split(","));
 
-                T entity;
-                Type type = ((ParameterizedType)getClass().getGenericSuperclass())
-                        .getActualTypeArguments()[1];
-                ;
-
-                if (type instanceof Client) {
+                if (items.size()==3) {
                     Integer id = Integer.parseInt(items.get(0));
                     String name = items.get(1);
+                    Integer amount=Integer.parseInt(items.get(2));
 
-                    Client client = new Client(name);
+                    Client client = new Client(name,amount);
                     client.setId(id);
-                    entity = (T)client;
+                    T entity = (T)client;
 
                     try {
                         super.save(entity);
@@ -56,7 +52,7 @@ public class FileRepository<T extends BaseEntity<Integer>> extends InMemoryRepos
                     }
                 }
 
-                if (type instanceof Book) {
+                if (items.size()==5) {
                     Integer id = Integer.parseInt(items.get(0));
                     String title = items.get(1);
                     String author = items.get(2);
@@ -65,7 +61,7 @@ public class FileRepository<T extends BaseEntity<Integer>> extends InMemoryRepos
 
                     Book book = new Book(title,author,price,stock);
                     book.setId(id);
-                    entity = (T)book;
+                    T entity = (T)book;
 
                     try {
                         super.save(entity);
@@ -97,7 +93,7 @@ public class FileRepository<T extends BaseEntity<Integer>> extends InMemoryRepos
 
             if (entity instanceof Client) {
                 bufferedWriter.write(
-                        entity.getId() + "," + ((Client) entity).getName());
+                        entity.getId() + "," + ((Client) entity).getName()+","+((Client)entity).getAmountSpent());
                 bufferedWriter.newLine();
             }
             if (entity instanceof Book) {

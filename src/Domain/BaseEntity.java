@@ -17,4 +17,6 @@ public abstract class BaseEntity<ID> {
     public String toString() {
         return getId().toString();
     }
+
+    public abstract BaseEntity<ID> constructor(ArrayList<String> items);
 }
