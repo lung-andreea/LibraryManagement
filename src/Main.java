@@ -39,8 +39,4 @@ public class Main {
         console.runConsole();
 }
 
-    private static void writeClientsToXML()
-    {
-
-    }
 }
