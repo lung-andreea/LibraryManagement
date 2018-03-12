@@ -31,19 +31,19 @@ public class Client extends BaseEntity<Integer> {
     public void setAmountSpent(Integer amountSpent) {
         this.amountSpent = amountSpent;
     }
-
-    @Override
-    public Client constructor(ArrayList<String> items) {
-        Integer id=Integer.parseInt(items.get(0));
-        String name=items.get(1);
-        Integer amount=Integer.parseInt(items.get(2));
-        Client client=new Client(name,amount);
-        client.setId(id);
-        return client;
-    }
+//
+//    @Override
+//    public Client constructor(ArrayList<String> items) {
+//        Integer id=Integer.parseInt(items.get(0));
+//        String name=items.get(1);
+//        Integer amount=Integer.parseInt(items.get(2));
+//        Client client=new Client(name,amount);
+//        client.setId(id);
+//        return client;
+//    }
 
     @Override
     public String toString() {
-        return super.getId()+".\t|Name:"+this.name+"|\t|Amount spent:"+this.amountSpent+"|";
+        return this.name+", "+this.amountSpent+", "+super.toString();
     }
 }

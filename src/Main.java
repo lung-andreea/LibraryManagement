@@ -1,10 +1,14 @@
 import Controller.BookController;
 import Domain.Book;
 import Domain.Client;
+import Domain.Purchase;
 import Domain.Validators.BookValidator;
 import Domain.Validators.ClientValidator;
+import Domain.Validators.PurchaseValidator;
+import Domain.Validators.Validator;
 import Repository.FileRepository;
 import Repository.IRepository;
+import Repository.InMemoryRepository;
 import Tests.AllTests;
 import UI.Console;
 
@@ -21,10 +25,10 @@ public class Main {
         // FileRepo (CSV)
         IRepository clientsRepo = new FileRepository<Client>(new ClientValidator(),"clients.csv");
         IRepository booksRepo = new FileRepository<Book>(new BookValidator(),"books.csv");
-        Console console = new Console(new BookController(booksRepo,clientsRepo));
+        IRepository purchaseRepo=new InMemoryRepository<Integer,Purchase>(new PurchaseValidator());
+        Console console = new Console(new BookController(booksRepo,clientsRepo,purchaseRepo));
         console.runConsole();
 
-//          CE CACAT IS ASTEA ZI-MI SI MIE =]]]]
 ////        IRepository<Integer, Book> repo=new InMemoryRepository<>(new BookValidator());
 ////
 ////        Book b1=new Book("a","b",10,12);

@@ -3,6 +3,7 @@ package UI;
 import Controller.BookController;
 import Domain.Book;
 import Domain.Client;
+import Domain.Purchase;
 import Exceptions.ValidatorException;
 
 import java.io.BufferedReader;
@@ -44,6 +45,30 @@ public class Console {
         clients.stream().forEach(System.out::println);
     }
 
+    private void buyBooks(){
+        BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            System.out.println("Enter client ID: ");
+            Integer clientID=Integer.parseInt(bufferRead.readLine());
+            System.out.println("Enter book ID: ");
+            Integer bookID=Integer.parseInt(bufferRead.readLine());
+            System.out.println("Enter number of books bought: ");
+            Integer amount=Integer.parseInt(bufferRead.readLine());
+            ctrl.buy(clientID,bookID,amount);
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    }
+
+    private void printPurchases(){
+        Set<Purchase> bought=ctrl.getAllPurchases();
+        bought.stream().forEach(System.out::println);
+    }
+
     private void printAllBooks() {
         Set<Book> books = ctrl.getAllBooks();
         books.stream().forEach(System.out::println);
@@ -62,6 +87,8 @@ public class Console {
                     "4 - Print all clients\n" +
                     "5 - Filter books\n" +
                     "6 - Filter clients\n" +
+                    "7 - Buy books\n"+
+                    "8 - Print purchases\n"+
                     "0 - Exit\n");
             Scanner sc = new Scanner(System.in);
             int cmd = sc.nextInt();
@@ -87,6 +114,14 @@ public class Console {
                 case 6:
                 { filterClients();
                     break; }
+                case 7: {
+                    buyBooks();
+                    break;
+                }
+                case 8: {
+                    printPurchases();
+                    break;
+                }
                 default:
                 { System.out.println("Invalid command!\n"); }
             }
