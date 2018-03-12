@@ -1,25 +1,31 @@
 import Controller.BookController;
-import Domain.BaseEntity;
 import Domain.Book;
 import Domain.Client;
 import Domain.Validators.BookValidator;
 import Domain.Validators.ClientValidator;
-import Domain.Validators.Validator;
-import Exceptions.ValidatorException;
+import Repository.FileRepository;
 import Repository.IRepository;
-import Repository.InMemoryRepository;
 import Tests.AllTests;
 import UI.Console;
 
 public class Main {
 
     public static void main(String[] args) {
-        //System.out.println("HELOOOO BTS HEREEE");
+
         AllTests tests=new AllTests();
         tests.testAll();
-        Console console = new Console(new BookController(new InMemoryRepository<>(new BookValidator()), new InMemoryRepository<>(new ClientValidator())));
+
+        // In-memory
+//        Console console = new Console(new BookController(new InMemoryRepository<>(new BookValidator()), new InMemoryRepository<>(new ClientValidator())));
+//        console.runConsole();
+
+        // FileRepo (CSV)
+        IRepository clientsRepo = new FileRepository<Client>(new ClientValidator(),"clients.csv");
+        IRepository booksRepo = new FileRepository<Book>(new BookValidator(),"books.csv");
+        Console console = new Console(new BookController(booksRepo,clientsRepo));
         console.runConsole();
-//
+
+//          CE CACAT IS ASTEA ZI-MI SI MIE =]]]]
 ////        IRepository<Integer, Book> repo=new InMemoryRepository<>(new BookValidator());
 ////
 ////        Book b1=new Book("a","b",10,12);

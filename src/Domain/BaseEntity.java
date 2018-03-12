@@ -13,8 +13,6 @@ public class BaseEntity<ID> {
 
     @Override
     public String toString() {
-        return "BaseEntity{" +
-                "id=" + id +
-                '}';
+        return getId().toString();
     }
 }
