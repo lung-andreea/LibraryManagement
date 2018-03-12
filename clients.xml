@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><client-list>
+  <client>
+    <id>1</id>
+    <name>Sas Ingrid</name>
+    <amountSpent>0</amountSpent>
+  </client>
+  <client>
+    <id>2</id>
+    <name>Sabadas Oana</name>
+    <amountSpent>0</amountSpent>
+  </client>
+  <client>
+    <id>3</id>
+    <name>Cosmi Ratiu</name>
+    <amountSpent>0</amountSpent>
+  </client>
+  <client>
+    <id>4</id>
+    <name>Lorena Sabou</name>
+    <amountSpent>0</amountSpent>
+  </client>
+  
+  <client>
+    <id>5</id>
+    <name>Robas Iulia</name>
+    <amountSpent>0</amountSpent>
+  </client>
+</client-list>
