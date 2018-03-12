@@ -79,6 +79,14 @@ public class Console {
         clients.stream().forEach(System.out::println);
     }
 
+    private void sortBooks(){
+        ctrl.sortBooks().stream().forEach(System.out::println);
+    }
+
+    private void sortClients(){
+        ctrl.sortClients().stream().forEach(System.out::println);
+    }
+
     private void runMenu() {
         while(true){
             System.out.print("\n1 - Read new Book\n" +
@@ -89,6 +97,9 @@ public class Console {
                     "6 - Filter clients\n" +
                     "7 - Buy books\n"+
                     "8 - Print purchases\n"+
+                    "9 - Sort books by title\n"+
+                    "10 - Sort clients by amount spent\n"+
+                    "11 - Sort clients by number of books bought\n"+
                     "0 - Exit\n");
             Scanner sc = new Scanner(System.in);
             int cmd = sc.nextInt();
@@ -120,6 +131,18 @@ public class Console {
                 }
                 case 8: {
                     printPurchases();
+                    break;
+                }
+                case 9: {
+                    sortBooks();
+                    break;
+                }
+                case 10: {
+                    sortClients();
+                    break;
+                }
+                case 11: {
+                    ctrl.sortClientsByAmountBought();
                     break;
                 }
                 default:

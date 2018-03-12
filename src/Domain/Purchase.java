@@ -17,4 +17,29 @@ public class Purchase extends BaseEntity<Integer>{
     public String toString() {
         return super.toString()+".\t|Client: "+client.getName()+"|\t|Book: "+book.getTitle()+"|\t|Amount bought: "+amountBought+"|";
     }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Integer getAmountBought() {
+        return amountBought;
+    }
+
+    public void setAmountBought(Integer amountBought) {
+        this.amountBought = amountBought;
+
+    }
 }

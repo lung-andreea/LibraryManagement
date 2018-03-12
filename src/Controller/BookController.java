@@ -6,6 +6,8 @@ import Domain.Purchase;
 import Exceptions.ValidatorException;
 import Repository.IRepository;
 
+import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -89,5 +91,31 @@ public class BookController {
         clientRepo.update(client);
         Purchase p=new Purchase(client,book,amount);
         purchaseRepo.save(p);
+    }
+
+    public List<Book> sortBooks(){
+        return StreamSupport.stream(bookRepo.findAll().spliterator(),false)
+                .sorted((book1,book2)->book1.getTitle().compareTo(book2.getTitle()))
+                .collect(Collectors.toList());
+    }
+
+    public List<Client> sortClients(){
+        return StreamSupport.stream(clientRepo.findAll().spliterator(),false)
+                .sorted((client1,client2)->client1.getAmountSpent().compareTo(client2.getAmountSpent()))
+                .collect(Collectors.toList());
+    }
+
+    public List<Client> sortClientsByAmountBought(){
+        System.out.println(
+                StreamSupport.stream(clientRepo.findAll().spliterator(),false)
+                            .sorted((client1,client2)->StreamSupport.stream(purchaseRepo.findAll().spliterator(),false)
+                                            .filter(p->p.getClient().getId()==client1.getId())
+                                            .map(p->p.getAmountBought())
+                                            .reduce(0,(aux,am)->aux+am).compareTo(StreamSupport.stream(purchaseRepo.findAll().spliterator(),false)
+                                                                                        .filter(p->p.getClient().getId()==client2.getId())
+                                                                                        .map(p->p.getAmountBought())
+                                                                                        .reduce(0,(aux,am)->aux+am)))
+                            .collect(Collectors.toList()));
+        return null;
     }
 }
