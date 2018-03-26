@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book-list>
+    <book id="1">
+        <title>title1</title>
+        <author>author1</author>
+        <price>50</price>
+        <stock>20</stock>
+    </book>
+    <book id="2">
+        <title>title2</title>
+        <author>author2</author>
+        <price>69</price>
+        <stock>45</stock>
+    </book>
+    <book id="3">
+        <title>title3</title>
+        <author>author3</author>
+        <price>39</price>
+        <stock>15</stock>
+    </book>
+    <book id="4">
+        <title>title4</title>
+        <author>author4</author>
+        <price>40</price>
+        <stock>23</stock>
+    </book>
+    <book id="5">
+        <title>title5</title>
+        <author>author5</author>
+        <price>99</price>
+        <stock>51</stock>
+    </book>
+</book-list>
